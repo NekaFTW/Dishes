@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cGc-dg-pLG">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,11 +12,11 @@
             <objects>
                 <tableViewController id="cGc-dg-pLG" customClass="TableViewController" customModule="DishesList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3tg-VB-yYl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="120" id="i21-8A-phq">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="120" id="i21-8A-phq" customClass="TableViewCell" customModule="DishesList" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i21-8A-phq" id="xxy-au-vXn">
@@ -24,23 +24,23 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pUv-LJ-Ruz">
-                                            <rect key="frame" x="30" y="10" width="100" height="100"/>
+                                            <rect key="frame" x="20" y="10" width="100" height="100"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="100" id="0gd-48-Py0"/>
                                                 <constraint firstAttribute="height" constant="100" id="T38-kl-YVr"/>
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="J7P-Rq-oXW">
-                                            <rect key="frame" x="160" y="27.5" width="96" height="65"/>
+                                            <rect key="frame" x="140" y="27.666666666666664" width="164.66666666666663" height="64.666666666666686"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pepito Perez" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0t4-hb-k2z">
-                                                    <rect key="frame" x="0.0" y="0.0" width="96" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Macarrones Boloñesa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0t4-hb-k2z">
+                                                    <rect key="frame" x="0.0" y="0.0" width="164.66666666666666" height="20.333333333333332"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="46000643" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wS6-xx-Tdn">
-                                                    <rect key="frame" x="0.0" y="44.5" width="96" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="12€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wS6-xx-Tdn">
+                                                    <rect key="frame" x="0.0" y="44.333333333333329" width="164.66666666666666" height="20.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -49,12 +49,17 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="pUv-LJ-Ruz" firstAttribute="leading" secondItem="xxy-au-vXn" secondAttribute="leading" constant="30" id="0Du-Nv-A69"/>
-                                        <constraint firstItem="J7P-Rq-oXW" firstAttribute="leading" secondItem="pUv-LJ-Ruz" secondAttribute="trailing" constant="30" id="JPx-tr-CRz"/>
+                                        <constraint firstItem="pUv-LJ-Ruz" firstAttribute="leading" secondItem="xxy-au-vXn" secondAttribute="leading" constant="20" id="0Du-Nv-A69"/>
+                                        <constraint firstItem="J7P-Rq-oXW" firstAttribute="leading" secondItem="pUv-LJ-Ruz" secondAttribute="trailing" constant="20" id="JPx-tr-CRz"/>
                                         <constraint firstItem="pUv-LJ-Ruz" firstAttribute="centerY" secondItem="xxy-au-vXn" secondAttribute="centerY" id="ZcH-zh-uEX"/>
                                         <constraint firstItem="J7P-Rq-oXW" firstAttribute="centerY" secondItem="xxy-au-vXn" secondAttribute="centerY" id="gGk-5m-w3l"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageDish" destination="pUv-LJ-Ruz" id="RH6-wT-szD"/>
+                                    <outlet property="nameDish" destination="0t4-hb-k2z" id="UWP-Fs-K0v"/>
+                                    <outlet property="priceDish" destination="wS6-xx-Tdn" id="ttd-P6-4kG"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
