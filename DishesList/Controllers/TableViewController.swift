@@ -8,10 +8,12 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-
+    // instancia dishes (Model)
+    let dishes: [Dish] = hardCodeDishes()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -20,26 +22,25 @@ class TableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+    // numero de secciones diferentes
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1 // En este proyecto necesito solo una seccion
     }
-
+    // numero de filas
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return dishes.count
     }
-
-    /*
+    // mostrar celda con los datos instanciados
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Dish", for: indexPath) as? TableViewCell else {
+            return UITableViewCell()
+        }
+        cell.nameDishLabel.text = "\(dishes[indexPath.row].typeDish) \(dishes[indexPath.row].nameDish)"
+        cell.priceDishLabel.text = dishes[indexPath.row].priceDish
+        cell.imageDishView.image = UIImage(named: dishes[indexPath.row].imageDish)
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
