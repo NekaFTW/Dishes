@@ -9,7 +9,7 @@ import UIKit
 
 class TableViewController: UITableViewController {
     // dishes (ViewModel)
-    let dishes = DishViewModel()
+    let viewModel = DishViewModel()
     
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -28,18 +28,18 @@ class TableViewController: UITableViewController {
     }
     // numero de filas
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dishes.getDishesCount()
+        return viewModel.getDishesCount()
     }
     // mostrar celda con los datos instanciados
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Dish", for: indexPath) as? TableViewCell else {
             return UITableViewCell()
         }
-        cell.nameDishLabel.text = dishes.getNameDish(indexPath.row)
+        cell.nameDishLabel.text = viewModel.getNameDish(indexPath.row)
         
-        cell.priceDishLabel.text = dishes.getPriceDish(indexPath.row)
+        cell.priceDishLabel.text = viewModel.getPriceDish(indexPath.row)
         
-        cell.imageDishView.image = UIImage(named: dishes.getImageDish(indexPath.row))
+        cell.imageDishView.image = UIImage(named: viewModel.getImageDish(indexPath.row))
         return cell
     }
 
