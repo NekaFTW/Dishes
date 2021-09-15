@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lA8-8x-L6f">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -13,7 +13,7 @@
             <objects>
                 <collectionViewController id="lA8-8x-L6f" customClass="CollectionViewController" customModule="DishesList" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="iYu-7G-Yad">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vha-0Z-UfM">
@@ -40,14 +40,20 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="iTD-80-xgF">
                                             <rect key="frame" x="5" y="80" width="140" height="45"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Macarrones Boloñesa" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAw-Sg-IwY">
-                                                    <rect key="frame" x="0.0" y="0.0" width="140" height="27"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Macarrones Boloñesa" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAw-Sg-IwY">
+                                                    <rect key="frame" x="0.0" y="0.0" width="140" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="jhb-QU-KU6"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="12€" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejK-tk-wQb">
-                                                    <rect key="frame" x="0.0" y="33" width="140" height="12"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12€" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejK-tk-wQb">
+                                                    <rect key="frame" x="0.0" y="30" width="140" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="6kp-Ui-amh"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -56,8 +62,10 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="iTD-80-xgF" firstAttribute="centerX" secondItem="6xY-ZF-bQt" secondAttribute="centerX" id="GXh-hp-w8k"/>
                                         <constraint firstItem="iTD-80-xgF" firstAttribute="leading" secondItem="6xY-ZF-bQt" secondAttribute="leading" constant="5" id="IeX-je-gH5"/>
                                         <constraint firstItem="Xwn-K8-Ltv" firstAttribute="top" secondItem="6xY-ZF-bQt" secondAttribute="top" id="Kj5-SR-Ds8"/>
+                                        <constraint firstItem="Xwn-K8-Ltv" firstAttribute="centerX" secondItem="6xY-ZF-bQt" secondAttribute="centerX" id="VZJ-LX-55f"/>
                                         <constraint firstItem="iTD-80-xgF" firstAttribute="top" secondItem="Xwn-K8-Ltv" secondAttribute="bottom" constant="5" id="eNi-CX-PR0"/>
                                         <constraint firstAttribute="trailing" secondItem="iTD-80-xgF" secondAttribute="trailing" constant="5" id="lTf-1v-loC"/>
                                         <constraint firstAttribute="bottom" secondItem="iTD-80-xgF" secondAttribute="bottom" id="q12-Dt-AcP"/>
