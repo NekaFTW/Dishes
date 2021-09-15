@@ -8,10 +8,10 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-    // instancia dishes (Model)
-    let dishes: [Dish] = hardCodeDishes()
+    // dishes (ViewModel)
+    let dishes = DishViewModel()
     
-    override func viewDidLoad() {
+    override func viewDidLoad(){
         super.viewDidLoad()
         
         // Uncomment the following line to preserve selection between presentations
@@ -28,16 +28,18 @@ class TableViewController: UITableViewController {
     }
     // numero de filas
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dishes.count
+        return dishes.getDishesCount()
     }
     // mostrar celda con los datos instanciados
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Dish", for: indexPath) as? TableViewCell else {
             return UITableViewCell()
         }
-        cell.nameDishLabel.text = "\(dishes[indexPath.row].typeDish) \(dishes[indexPath.row].nameDish)"
-        cell.priceDishLabel.text = dishes[indexPath.row].priceDish
-        cell.imageDishView.image = UIImage(named: dishes[indexPath.row].imageDish)
+        cell.nameDishLabel.text = dishes.getNameDish(indexPath.row)
+        
+        cell.priceDishLabel.text = dishes.getPriceDish(indexPath.row)
+        
+        cell.imageDishView.image = UIImage(named: dishes.getImageDish(indexPath.row))
         return cell
     }
 
