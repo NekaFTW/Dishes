@@ -9,7 +9,7 @@ import UIKit
 
 
 class CollectionViewController: UICollectionViewController {
-    private let reuseIdentifier = "Cell"
+   // private let reuseIdentifier = "Cell"
     
     let viewModel = DishViewModel()
 
@@ -20,7 +20,7 @@ class CollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+       // self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
     }
@@ -37,9 +37,9 @@ class CollectionViewController: UICollectionViewController {
 
     // MARK: UICollectionViewDataSource
     // numero de secciones diferentes
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-            return 1 // En este proyecto necesito solo una seccion
-        }
+    //override func numberOfSections(in collectionView: UICollectionView) -> Int {
+      //      return 1 // En este proyecto necesito solo una seccion
+       // }
     // numero de items que mostramos
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.getDishesCount()
